@@ -257,8 +257,6 @@
             </div>
             </div>
 
-        <?php } ?>
-
         <?php
         require_once('./request/search_request4.php');
         ?>
