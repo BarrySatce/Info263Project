@@ -10,9 +10,15 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- css style sheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- javascript file -->
+    <script src="scripts/scripts.js"></script>
 
 </head>
 <body>
