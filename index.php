@@ -12,7 +12,7 @@
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/bootstrap-grid.min.css">
      <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/styles.css">
 
      <!-- error handling function -->
      <script>  //error handling function + test in line 10
