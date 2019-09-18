@@ -163,12 +163,6 @@
         <?php
         require_once('./request/search_request.php');
         ?>
-        <?php
-        /*        require_once('./request/search_request2.php');
-                */?><!--
-        --><?php
-        /*        require_once('./request/search_request3.php');
-                */?>
 
         <?php
         if (empty($_POST['input'])){
