@@ -154,7 +154,7 @@
                             <td data-label="Odometer Reading"><?php echo $row['ODOMETER READING'];?></td>
 
                         </tr>
-                        <?php /*} */?>
+
                 </table>
             </div>
             </div>
