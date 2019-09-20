@@ -79,7 +79,6 @@
                         <th scope="col">Body Type</th>
                         <th scope="col">Chassis Number</th>
                         <th scope="col">Odometer Reading</th>
-                        </tr>
                         </thead>
                         <tbody>
                         <tr>
