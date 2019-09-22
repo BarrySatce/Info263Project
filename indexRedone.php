@@ -38,10 +38,29 @@
         <div class="col-4 border">Spare Button</div>
     </div>
 
-    <!-- This is the third row, it will have the search bar -->
-    <div class="row my-5" id="search">
-        <div class="col my-auto text-center">Search Bar</div>
+    <!-- This is the third row, it contains the search bar -->
+
+    <div class="container">
+        <br/>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <form class="card card-sm">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i class="fas fa-search h4 text-body"></i>
+                        </div>
+                        <div class="col">
+                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Enter invoice number...">
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-lg btn-success" type="submit">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+
 
     <!-- This is the forth row, it will have all the invoice options on the left,
          when on is clicked a table will be shown to the right containing that info -->
