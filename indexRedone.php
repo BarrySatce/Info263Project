@@ -163,34 +163,34 @@
 
                 <div class="tab-pane fade table-hover" id="alignment" role="tabpanel" aria-labelledby="alignment-tab">
                     <header class="header">Back Axle</header>
+                    <header class="car_part">Camber</header>
                     <table class="table">
                         <thead class="thead-dark">
-                        <th class="maxwidth-title">Camber</th>
-                        <th>Orientations</th>
-                        <th>Before</th>
-                        <th>Target</th>
-                        <th>Actual</th>
+                            <th colspan="4">Camber</th>
+                        </thead>
+                        <thead class="thead-dark">
+                            <th>Orientations</th>
+                            <th>Before</th>
+                            <th>Target</th>
+                            <th>Actual</th>
                         </thead>
                         <tbody>
                         <tr>
-                            <td data-label="Camber" class="table-no-underline background noPad">&nbsp;</td>
                             <td class="table-column-head orientations">Left</td>
                             <td data-label="Before"><?php echo $row4['1']; ?></td>
-                            <td data-label="Target" class="table-no-underline target">-0°40' +/-0°30'</td>
+                            <td data-label="Target">-0°40' +/-0°30'</td>
                             <td data-label="Actual"><?php echo $row4['2']; ?></td>
                         </tr>
                         <tr>
-                            <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Right</td>
                             <td data-label="Before"><?php echo $row4['3']; ?></td>
-                            <td class="noShow target"></td>
+                            <td data-label="Target">-0°40' +/-0°30'</td>
                             <td data-label="Actual"><?php echo $row4['4']; ?></td>
                         </tr>
                         <tr>
-                            <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Cross</td>
                             <td data-label="Before"><?php echo $row4['5']; ?></td>
-                            <td data-label="Target" class="target">0°00' +/-0°30'</td>
+                            <td data-label="Target">0°00' +/-0°30'</td>
                             <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['6']; ?></td>
                         </tr>
                         </tbody>

@@ -13,6 +13,16 @@ body {
     background-color: darkgrey;
 }
 
+.car_part{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    background-color: black;
+    color: pink;
+}
+
 
 .container-fluid{
     padding-left: 50px;
@@ -22,7 +32,6 @@ body {
 /* Responsive table */
 
 .table {
-    border-bottom: 2px solid darkgrey;
     margin:0;
     padding:25px;
     border: 0; /* no border */
