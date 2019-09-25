@@ -164,12 +164,12 @@
                     </table>
                 </div>
 
-                <div class="tab-pane fade" id="alignment" role="tabpanel" aria-labelledby="alignment-tab">
+                <div class="tab-pane fade table-hover" id="alignment" role="tabpanel" aria-labelledby="alignment-tab">
                     <header class="header">Back Axle</header>
                     <table class="table">
                         <thead class="thead-dark">
                         <th class="maxwidth-title">Camber</th>
-                        <th></th>
+                        <th>Orientations</th>
                         <th>Before</th>
                         <th>Target</th>
                         <th>Actual</th>
@@ -184,14 +184,14 @@
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
-                            <td class="table-column-head">Right</td>
+                            <td class="table-column-head orientations">Right</td>
                             <td data-label="Before"><?php echo $row4['3']; ?></td>
                             <td class="noShow target"></td>
                             <td data-label="Actual"><?php echo $row4['4']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
-                            <td class="table-column-head">Cross</td>
+                            <td class="table-column-head orientations">Cross</td>
                             <td data-label="Before"><?php echo $row4['5']; ?></td>
                             <td data-label="Target" class="target">0°00' +/-0°30'</td>
                             <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['6']; ?></td>
@@ -202,7 +202,7 @@
                     <table class="table">
                         <thead class="thead-dark">
                         <th class="maxwidth-title">Toe</th>
-                        <th>&nbsp;</th>
+                        <th>Orientations</th>
                         <th>Before</th>
                         <th>Target</th>
                         <th>Actual</th>
@@ -256,7 +256,7 @@
                     <table class="table">
                         <thead class="thead-dark">
                         <th class="maxwidth-title">Camber</th>
-                        <th>&nbsp;</th>
+                        <th>Orientations</th>
                         <th>Before</th>
                         <th>Target</th>
                         <th>Actual</th>
@@ -288,7 +288,7 @@
                     <table class="table">
                         <thead class="thead-dark">
                         <th class="maxwidth-title">Caster</th>
-                        <th>&nbsp;</th>
+                        <th>Orientations</th>
                         <th>Before</th>
                         <th>Target</th>
                         <th>Actual</th>
@@ -320,7 +320,7 @@
                     <table class="table">
                         <thead class="thead-dark">
                         <th class="maxwidth-title">SAI</th>
-                        <th>&nbsp;</th>
+                        <th>Orientations</th>
                         <th>Before</th>
                         <th>Target</th>
                         <th>Actual</th>
@@ -352,7 +352,7 @@
                     <table class="table">
                         <thead class="thead-dark">
                         <th class="maxwidth-title">Track differential angle</th>
-                        <th>&nbsp;</th>
+                        <th>Orientations</th>
                         <th>Before</th>
                         <th>Target</th>
                         <th>Actual</th>
@@ -377,7 +377,7 @@
                     <table class="table">
                         <thead class="thead-dark">
                         <th class="maxwidth-title">Toe</th>
-                        <th>&nbsp;</th>
+                        <th>Orientations</th>
                         <th>Before</th>
                         <th>Target</th>
                         <th>Actual</th>
@@ -428,7 +428,7 @@
                     <table class="table">
                         <thead class="thead-dark">
                         <th class="maxwidth-title">Max steering lock</th>
-                        <th>&nbsp;</th>
+                        <th>Orientations</th>
                         <th>Before</th>
                         <th>Target</th>
                         <th>Actual</th>

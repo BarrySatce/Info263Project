@@ -13,6 +13,7 @@ body {
     background-color: darkgrey;
 }
 
+
 .container-fluid{
     padding-left: 50px;
     padding-right: 50px;
@@ -26,6 +27,7 @@ body {
     border: 0; /* no border */
     border-collapse: collapse;
     width: 100%;
+
 }
 table td{
     border-bottom: 2px solid darkgrey;
@@ -39,6 +41,7 @@ table th{
     text-align: center;
     text-transform: uppercase;
     padding: 5px;
+
 }
 table tr {
     padding: 5px;
