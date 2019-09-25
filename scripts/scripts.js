@@ -1,1 +1,3 @@
-// Keep your scripts in here
+document.getElementById("demo").innerHTML = "Hello, World!";
+
+$("#demo").html("Hello, World!");

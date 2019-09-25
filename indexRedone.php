@@ -16,9 +16,6 @@
     <!-- css style sheet -->
     <link rel="stylesheet" href="css/redoneStyles.css">
 
-    <!-- javascript file -->
-    <script src="scripts/scripts.js"></script>
-
     <!-- php -->
     <?
     require_once('./request/search_request2.php');
@@ -76,9 +73,9 @@
         <div class="col my-auto text-center">
             <form method="post" action="indexRedone.php">
                 <input type="text" name="input" size="25" id="receiptID" placeholder="Enter Invoice Number">
-                <input type="submit" name="submitButton" value="Submit"></div></form>
-            </form>
+                <input type="submit" name="submitButton" value="Submit">
         </div>
+    </div>
 
     <!-- This is the forth row, it will have all the invoice options on the left,
          when on is clicked a table will be shown to the right containing that info -->
@@ -159,7 +156,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <?php echo $branchRow ?>
+                        <?php echo $branchRow ?>
                         </tbody>
                     </table>
                 </div>
@@ -470,7 +467,7 @@
         </div>
     </div>
 </div>
-
+<h1 id="demo"></h1>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -481,4 +478,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<!-- javascript file -->
+<script src="jquery-3.4.1.min.js"></script>
+<script src="scripts/scripts.js"></script>
+
 </html>
