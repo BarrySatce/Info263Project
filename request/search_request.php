@@ -20,16 +20,12 @@ $query2 =  "SELECT
 
 if (isset($_POST['submitButton'])){
     $search_term = mysqli_real_escape_string($conn, $_POST['input']);
-
-
     $query2 .= "WHERE invoice_id LIKE '%" .$search_term."%' ";
-
-}
-
-$query = mysqli_query($conn, $query2) or die(mysqli_error($conn));
-if ($row = mysqli_fetch_array($query)) {
-$invoiceRow = '<tr><td>' . $row['TAX INVOICE NUMBER'] . '</td><td>' . $row['SERVICE DESCRIPTION'] . '</td><td>' . $row['QUANTITY'] . '</td><td>' . $row['UNIT PRICE'] .
-'</td><td>' . $row['AMOUNT'] . '</td><td>' . $row['SUBTOTAL'] . '</td><td>' . $row['GST'] . '</td><td>' . $row['TOTAL'] .
-'</td><td>' . $row['PAID'] . '</td><td>' . $row['DATE'] . '</td><td>' . $row['DUE DATE'] . '</td><tr>';
+    $query = mysqli_query($conn, $query2) or die(mysqli_error($conn));
+    if ($row = mysqli_fetch_array($query)) {
+        $invoiceRow = '<tr><td>' . $row['TAX INVOICE NUMBER'] . '</td><td>' . $row['SERVICE DESCRIPTION'] . '</td><td>' . $row['QUANTITY'] . '</td><td>' . $row['UNIT PRICE'] .
+            '</td><td>' . $row['AMOUNT'] . '</td><td>' . $row['SUBTOTAL'] . '</td><td>' . $row['GST'] . '</td><td>' . $row['TOTAL'] .
+            '</td><td>' . $row['PAID'] . '</td><td>' . $row['DATE'] . '</td><td>' . $row['DUE DATE'] . '</td><tr>';
     }
+}
 ?>

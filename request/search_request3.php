@@ -26,13 +26,13 @@ $query2 =  "SELECT
 if (isset($_POST['submitButton'])){
     $search_term = mysqli_real_escape_string($conn, $_POST['input']);
     $query2 .= "WHERE invoice.invoice_id LIKE '%" .$search_term."%' ";
-
+    $query = mysqli_query($conn, $query2) or die(mysqli_error($conn));
+    if ($row = mysqli_fetch_array($query)) {
+        $branchRow = '<tr><td>' . $row['TECHNICIAN NAME'] . '</td><td>' . $row['INSPECTION TIME/DATE'] . '</td><td>' .
+            $row['BRANCH NAME'] . '</td><td>' . $row['BRANCH PHONE'] . '</td><td>' . $row['BRANCH EMAIL'] .
+            '</td><td>' . $row['BRANCH ADDRESS'] . '</td><td>' . $row['BRANCH GST REGISTRATION'] . '</td><td>' . $row['BRANCH FAX'] . '</td><tr>';
+    }
 }
 
-$query = mysqli_query($conn, $query2) or die(mysqli_error($conn));
-if ($row = mysqli_fetch_array($query)) {
-    $branchRow = '<tr><td>' . $row['TECHNICIAN NAME'] . '</td><td>' . $row['INSPECTION TIME/DATE'] . '</td><td>' .
-        $row['BRANCH NAME'] . '</td><td>' . $row['BRANCH PHONE'] . '</td><td>' . $row['BRANCH EMAIL'] .
-        '</td><td>' . $row['BRANCH ADDRESS'] . '</td><td>' . $row['BRANCH GST REGISTRATION'] . '</td><td>' . $row['BRANCH FAX'] . '</td><tr>';
-}
+
 ?>
