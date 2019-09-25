@@ -165,11 +165,11 @@
                 </div>
 
                 <div class="tab-pane fade" id="alignment" role="tabpanel" aria-labelledby="alignment-tab">
-                    <header>Back Axle</header>
+                    <header class="header">Back Axle</header>
                     <table class="table">
                         <thead class="thead-dark">
                         <th class="maxwidth-title">Camber</th>
-                        <th>&nbsp;</th>
+                        <th></th>
                         <th>Before</th>
                         <th>Target</th>
                         <th>Actual</th>
@@ -252,7 +252,7 @@
                             <td data-label="Actual"><?php echo $row4['14']; ?></td>
                         </tbody>
                     </table>
-                    <header>Front Axle</header>
+                    <header class="header">Front Axle</header>
                     <table class="table">
                         <thead class="thead-dark">
                         <th class="maxwidth-title">Camber</th>

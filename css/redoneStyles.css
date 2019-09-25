@@ -1,7 +1,16 @@
 body {
     padding-top: 5px;
-    background-color: pink;
-    font-family: "Arial", Times, serif;
+    background-color: lightsteelblue;
+    font-family: "Verdana", Times, serif;
+}
+
+.header{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 40px;
+    background-color: darkgrey;
 }
 
 .container-fluid{
