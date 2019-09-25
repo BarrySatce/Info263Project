@@ -19,12 +19,18 @@
     <!-- javascript file -->
     <script src="scripts/scripts.js"></script>
 
+    <!-- php -->
+    <?
+    require_once('./request/search_request2.php');
+    require_once('./request/search_request3.php');
+    require_once('./request/search_request.php');
+    require_once('./request/search_request4.php');
+    ?>
 </head>
 <body>
 <!-- This container contains everything on the page
      The page is split up into 4 'Rows', each with their own amount of columns-->
 <div class="container-fluid">
-
     <!-- This is the first row, it will contain the logo, and the page Header (or a banner if we choose) -->
     <div class="row my-5" id="header">
         <div class="col-2">Image goes here</div>
@@ -39,28 +45,40 @@
     </div>
 
     <!-- This is the third row, it contains the search bar -->
-
-    <div class="container">
-        <br/>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-8">
-                <form class="card card-sm">
-                    <div class="card-body row no-gutters align-items-center">
-                        <div class="col-auto">
-                            <i class="fas fa-search h4 text-body"></i>
+    <!--
+    <div class="row my-5" id="input">
+        <div class="container">
+            <br/>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <form class="card card-sm">
+                        <div class="card-body row no-gutters align-items-center">
+                            <div class="col-auto">
+                                <i class="fas fa-search h4 text-body"></i>
+                            </div>
+                            <div class="col">
+                                <input class="form-control form-control-lg form-control-borderless" type="search"
+                                       placeholder="Enter invoice number...">
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-lg btn-success" type="submit">Search</button>
+                            </div>
                         </div>
-                        <div class="col">
-                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Enter invoice number...">
-                        </div>
-                        <div class="col-auto">
-                            <button class="btn btn-lg btn-success" type="submit">Search</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    -->
 
+
+    <div class="row my-5" id="search">
+        <div class="col my-auto text-center">
+            <form method="post" action="indexRedone.php">
+                <input type="text" name="input" size="25" id="receiptID" placeholder="Enter Invoice Number">
+                <input type="submit" name="submitButton" value="Submit"></div></form>
+            </form>
+        </div>
 
     <!-- This is the forth row, it will have all the invoice options on the left,
          when on is clicked a table will be shown to the right containing that info -->
@@ -100,18 +118,7 @@
                         <th scope="col">Odometer Reading</th>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td data-label="Name">name</td>
-                            <td data-label="Email">email</td>
-                            <td data-label="Phone">phone</td>
-                            <td data-label="Vehicle Registration">vr</td>
-                            <td data-label="Vehicle Model"><?php echo $row['VEHICLE MODEL']; ?></td>
-                            <td data-label="Vehicle Make"><?php echo $row['VEHICLE MAKE']; ?></td>
-                            <td data-label="Year"><?php echo $row['YEAR']; ?></td>
-                            <td data-label="Body Type"><?php echo $row['BODY TYPE']; ?></td>
-                            <td data-label="Chassis Number"><?php echo $row['CHASSIS NUMBER']; ?></td>
-                            <td data-label="Odometer Reading"><?php echo $row['ODOMETER READING']; ?></td>
-                        </tr>
+                        <? echo $custRow ?>
                         </tbody>
                     </table>
                 </div>
@@ -133,19 +140,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td data-label="Tax Invoice Number"><?php echo $row['TAX INVOICE NUMBER']; ?></td>
-                            <td data-label="Service Description"><?php echo $row['SERVICE DESCRIPTION']; ?></td>
-                            <td data-label="Quantity"><?php echo $row['QUANTITY']; ?></td>
-                            <td data-label="Unit Price"><?php echo '$' . $row['UNIT PRICE']; ?></td>
-                            <td data-label="Amount"><?php echo '$' . $row['AMOUNT']; ?></td>
-                            <td data-label="Subtotal"><?php echo '$' . $row['SUBTOTAL']; ?></td>
-                            <td data-label="GST"><?php echo '$' . $row['GST']; ?></td>
-                            <td data-label="Total"><?php echo '$' . $row['TOTAL']; ?></td>
-                            <td data-label="Paid"><?php echo '$' . $row['PAID']; ?></td>
-                            <td data-label="Date"><?php echo $row['DATE']; ?></td>
-                            <td data-label="Due Date"><?php echo $row['DUE DATE']; ?></td>
-                        </tr>
+                        <? echo $invoiceRow ?>
                         </tbody>
                     </table>
                 </div>
@@ -164,21 +159,11 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td data-label="Name"><?php echo $row['NAME']; ?></td>
-                            <td data-label="Email"><?php echo $row['EMAIL']; ?></td>
-                            <td data-label="Phone"><?php echo $row['PHONE']; ?></td>
-                            <td data-label="Vehicle Registration"><?php echo $row['VEHICLE REGISTRATION']; ?></td>
-                            <td data-label="Vehicle Model"><?php echo $row['VEHICLE MODEL']; ?></td>
-                            <td data-label="Vehicle Make"><?php echo $row['VEHICLE MAKE']; ?></td>
-                            <td data-label="Year"><?php echo $row['YEAR']; ?></td>
-                            <td data-label="Body Type"><?php echo $row['BODY TYPE']; ?></td>
-                            <td data-label="Chassis Number"><?php echo $row['CHASSIS NUMBER']; ?></td>
-                            <td data-label="Odometer Reading"><?php echo $row['ODOMETER READING']; ?></td>
-                        </tr>
+                            <?php echo $branchRow ?>
                         </tbody>
                     </table>
                 </div>
+
                 <div class="tab-pane fade" id="alignment" role="tabpanel" aria-labelledby="alignment-tab">
                     <header>Back Axle</header>
                     <table class="table">
@@ -193,23 +178,23 @@
                         <tr>
                             <td data-label="Camber" class="table-no-underline background noPad">&nbsp;</td>
                             <td class="table-column-head orientations">Left</td>
-                            <td data-label="Before"><?php echo $row['1']; ?></td>
+                            <td data-label="Before"><?php echo $row4['1']; ?></td>
                             <td data-label="Target" class="table-no-underline target">-0°40' +/-0°30'</td>
-                            <td data-label="Actual"><?php echo $row['2']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['2']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head">Right</td>
-                            <td data-label="Before"><?php echo $row['3']; ?></td>
+                            <td data-label="Before"><?php echo $row4['3']; ?></td>
                             <td class="noShow target"></td>
-                            <td data-label="Actual"><?php echo $row['4']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['4']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head">Cross</td>
-                            <td data-label="Before"><?php echo $row['5']; ?></td>
+                            <td data-label="Before"><?php echo $row4['5']; ?></td>
                             <td data-label="Target" class="target">0°00' +/-0°30'</td>
-                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['6']; ?></td>
+                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['6']; ?></td>
                         </tr>
                         </tbody>
                     </table>
@@ -226,23 +211,23 @@
                         <tr>
                             <td data-label="Toe" class="table-no-underline background">&nbsp;</td>
                             <td class="table-column-head orientations">Left</td>
-                            <td data-label="Before"><?php echo $row['7']; ?></td>
+                            <td data-label="Before"><?php echo $row4['7']; ?></td>
                             <td data-label="Target" class="table-no-underline target">1.5mm +/-1.00</td>
-                            <td data-label="Actual"><?php echo $row['8']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['8']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Right</td>
-                            <td data-label="Before"><?php echo $row['9']; ?></td>
+                            <td data-label="Before"><?php echo $row4['9']; ?></td>
                             <td class="noShow target"></td>
-                            <td data-label="Actual"><?php echo $row['10']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['10']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Total</td>
-                            <td data-label="Before"><?php echo $row['11']; ?></td>
+                            <td data-label="Before"><?php echo $row4['11']; ?></td>
                             <td data-label="Target" class="target">3mm +/-2.0mm</td>
-                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['12']; ?></td>
+                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['12']; ?></td>
                         </tr>
                         </tbody>
                     </table>
@@ -262,9 +247,9 @@
                             <td class="table-column-head noRightBorder maxwidth-empty-second orientations noShow">
                                 &nbsp;
                             </td>
-                            <td data-label="Before"><?php echo $row['13']; ?></td>
+                            <td data-label="Before"><?php echo $row4['13']; ?></td>
                             <td data-label="Target" class="target">0°00'</td>
-                            <td data-label="Actual"><?php echo $row['14']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['14']; ?></td>
                         </tbody>
                     </table>
                     <header>Front Axle</header>
@@ -280,23 +265,23 @@
                         <tr>
                             <td data-label="Camber" class="table-no-underline background">&nbsp;</td>
                             <td class="table-column-head orientations">Left</td>
-                            <td data-label="Before"><?php echo $row['15']; ?></td>
+                            <td data-label="Before"><?php echo $row4['15']; ?></td>
                             <td data-label="Target" class="table-no-underline target">0°00' +/-0°30'</td>
-                            <td data-label="Actual"><?php echo $row['16']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['16']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Right</td>
-                            <td data-label="Before"><?php echo $row['17']; ?></td>
+                            <td data-label="Before"><?php echo $row4['17']; ?></td>
                             <td class="noShow target"></td>
-                            <td data-label="Actual"><?php echo $row['18']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['18']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Cross</td>
-                            <td data-label="Before"><?php echo $row['19']; ?></td>
+                            <td data-label="Before"><?php echo $row4['19']; ?></td>
                             <td data-label="Target" class="target">0°00' +/-0°30'</td>
-                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['20']; ?></td>
+                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['20']; ?></td>
                         </tr>
                         </tbody>
                     </table>
@@ -312,23 +297,23 @@
                         <tr>
                             <td data-label="Caster" class="table-no-underline background">&nbsp;</td>
                             <td class="table-column-head orientations">Left</td>
-                            <td data-label="Before"><?php echo $row['21']; ?></td>
+                            <td data-label="Before"><?php echo $row4['21']; ?></td>
                             <td data-label="Target" class="table-no-underline target">2°35' +/-0°30'</td>
-                            <td data-label="Actual"><?php echo $row['22']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['22']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Right</td>
-                            <td data-label="Before"><?php echo $row['23']; ?></td>
+                            <td data-label="Before"><?php echo $row4['23']; ?></td>
                             <td class="noShow target"></td>
-                            <td data-label="Actual"><?php echo $row['24']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['24']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Cross</td>
-                            <td data-label="Before"><?php echo $row['25']; ?></td>
+                            <td data-label="Before"><?php echo $row4['25']; ?></td>
                             <td data-label="Target" class="target">0°00' +/-0°30'</td>
-                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['26']; ?></td>
+                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['26']; ?></td>
                         </tr>
                         </tbody>
                     </table>
@@ -344,23 +329,23 @@
                         <tr>
                             <td data-label="SAI" class="table-no-underline background">&nbsp;</td>
                             <td class="table-column-head orientations">Left</td>
-                            <td data-label="Before"><?php echo $row['27']; ?></td>
+                            <td data-label="Before"><?php echo $row4['27']; ?></td>
                             <td data-label="Target" class="table-no-underline target">12°40' +/-0°45</td>
-                            <td data-label="Actual"><?php echo $row['28']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['28']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Right</td>
-                            <td data-label="Before"><?php echo $row['29']; ?></td>
+                            <td data-label="Before"><?php echo $row4['29']; ?></td>
                             <td class="noShow target"></td>
-                            <td data-label="Actual"><?php echo $row['30']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['30']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Cross</td>
-                            <td data-label="Before"><?php echo $row['31']; ?></td>
+                            <td data-label="Before"><?php echo $row4['31']; ?></td>
                             <td data-label="Target" class="target">0°00'</td>
-                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['32']; ?></td>
+                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['32']; ?></td>
                         </tr>
                         </tbody>
                     </table>
@@ -376,16 +361,16 @@
                         <tr>
                             <td data-label="Track Differential Angle" class="table-no-underline background">&nbsp;</td>
                             <td class="table-column-head orientations">Left</td>
-                            <td data-label="Before"><?php echo $row['33']; ?></td>
+                            <td data-label="Before"><?php echo $row4['33']; ?></td>
                             <td class="table-no-underline noShow target"></td>
-                            <td data-label="Actual"><?php echo $row['34']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['34']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Right</td>
-                            <td data-label="Before"><?php echo $row['35']; ?></td>
+                            <td data-label="Before"><?php echo $row4['35']; ?></td>
                             <td class="noShow target"></td>
-                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['36']; ?></td>
+                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['36']; ?></td>
                         </tr>
                         </tbody>
                     </table>
@@ -401,23 +386,23 @@
                         <tr>
                             <td data-label="Toe" class="table-no-underline background">&nbsp;</td>
                             <td class="table-column-head orientations">Left</td>
-                            <td data-label="Before"><?php echo $row['37']; ?></td>
+                            <td data-label="Before"><?php echo $row4['37']; ?></td>
                             <td data-label="Target" class="table-no-underline target">0.5mm +/-1.0mm</td>
-                            <td data-label="Actual"><?php echo $row['38']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['38']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Right</td>
-                            <td data-label="Before"><?php echo $row['39']; ?></td>
+                            <td data-label="Before"><?php echo $row4['39']; ?></td>
                             <td class="noShow target"></td>
-                            <td data-label="Actual"><?php echo $row['40']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['40']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Cross</td>
-                            <td data-label="Before"><?php echo $row['41']; ?></td>
+                            <td data-label="Before"><?php echo $row4['41']; ?></td>
                             <td data-label="Target">1mm +/-2.0mm</td>
-                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['42']; ?></td>
+                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['42']; ?></td>
                         </tr>
                         </tbody>
                     </table>
@@ -435,9 +420,9 @@
                             <td class="table-column-head noRightBorder maxwidth-empty-second noShow orientations">
                                 &nbsp;
                             </td>
-                            <td data-label="Before"><?php echo $row['43']; ?></td>
+                            <td data-label="Before"><?php echo $row4['43']; ?></td>
                             <td data-label="Target" class="target">0°00'</td>
-                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['44']; ?></td>
+                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['44']; ?></td>
                         </tbody>
                     </table>
                     <table class="table">
@@ -453,30 +438,30 @@
                             <td data-label="Max Steering Lock" class="table-no-underline background">Left Steer</td>
                             <!--<td data-label="Left Steer" class="bigNoShow"></td>-->
                             <td class="table-column-head orientations">Left</td>
-                            <td data-label="Before"><?php echo $row['45']; ?></td>
+                            <td data-label="Before"><?php echo $row4['45']; ?></td>
                             <td data-label="Target" class="table-no-underline target">-41°00' +/-1°30'</td>
-                            <td data-label="Actual"><?php echo $row['46']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['46']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Right</td>
-                            <td data-label="Before"><?php echo $row['47']; ?></td>
+                            <td data-label="Before"><?php echo $row4['47']; ?></td>
                             <td data-label="Target" class="target">33°00' +/-1°30'</td>
-                            <td data-label="Actual"><?php echo $row['48']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['48']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline background">Right Steer</td>
                             <td class="table-column-head orientations">Left</td>
-                            <td data-label="Before"><?php echo $row['49']; ?></td>
+                            <td data-label="Before"><?php echo $row4['49']; ?></td>
                             <td data-label="Target" class="table-no-underline target noShow">-41°00' +/-1°30'</td>
-                            <td data-label="Actual"><?php echo $row['50']; ?></td>
+                            <td data-label="Actual"><?php echo $row4['50']; ?></td>
                         </tr>
                         <tr>
                             <td class="table-no-underline noShow">&nbsp;</td>
                             <td class="table-column-head orientations">Right</td>
-                            <td data-label="Before"><?php echo $row['51']; ?></td>
+                            <td data-label="Before"><?php echo $row4['51']; ?></td>
                             <td class="noShow target">33°00' +/-1°30'</td>
-                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['52']; ?></td>
+                            <td class="underPadding bottomTD" data-label="Actual"><?php echo $row4['52']; ?></td>
                         </tr>
                         </tbody>
                     </table>
@@ -484,7 +469,7 @@
             </div>
         </div>
     </div>
-
+</div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

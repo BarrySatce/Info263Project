@@ -4,7 +4,10 @@ body {
     font-family: "Arial", Times, serif;
 }
 
-
+.container-fluid{
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
 /* Responsive table */
 

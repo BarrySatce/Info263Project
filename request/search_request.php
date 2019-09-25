@@ -27,12 +27,9 @@ if (isset($_POST['submitButton'])){
 }
 
 $query = mysqli_query($conn, $query2) or die(mysqli_error($conn));
-
-/*while ($row = mysqli_fetch_array($query)){
-    echo '<tr><td>' . $row['NAME'] . '</td><td>' . $row['EMAIL'] . '</td><td>' . $row['PHONE'] . '</td><td>' . $row['VEHICLE REGISTRATION'] .
-        '</td><td>' . $row['VEHICLE MODEL'] . '</td><td>' . $row['VEHICLE MAKE'] . '</td><td>' . $row['YEAR'] . '</td><td>' . $row['BODY TYPE'] .
-        '</td><td>' . $row['CHASSIS NUMBER'] . '</td><td>' . $row['CHASSIS NUMBER'] . '</td><tr>';
-}*/
-
-
+if ($row = mysqli_fetch_array($query)) {
+$invoiceRow = '<tr><td>' . $row['TAX INVOICE NUMBER'] . '</td><td>' . $row['SERVICE DESCRIPTION'] . '</td><td>' . $row['QUANTITY'] . '</td><td>' . $row['UNIT PRICE'] .
+'</td><td>' . $row['AMOUNT'] . '</td><td>' . $row['SUBTOTAL'] . '</td><td>' . $row['GST'] . '</td><td>' . $row['TOTAL'] .
+'</td><td>' . $row['PAID'] . '</td><td>' . $row['DATE'] . '</td><td>' . $row['DUE DATE'] . '</td><tr>';
+    }
 ?>
