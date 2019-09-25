@@ -22,7 +22,6 @@ body {
 /* Responsive table */
 
 .table {
-    border-bottom: 2px solid darkgrey;
     margin:0;
     padding:25px;
     border: 0; /* no border */
@@ -31,6 +30,7 @@ body {
 
 }
 table td{
+    border-bottom: 2px solid darkgrey;
     padding-top: 10px;
     padding: 5px;
     text-align: center;
