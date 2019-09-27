@@ -73,7 +73,7 @@
         <div class="col my-auto text-center">
             <form method="post" action="indexRedone.php">
                 <input type="text" name="input" size="25" id="receiptID" placeholder="Enter Invoice Number">
-                <input type="submit" name="submitButton" value="Submit">
+                <input id="submitButton" type="submit" name="submitButton" value="Submit">
         </div>
     </div>
 
@@ -177,7 +177,8 @@
                         <tbody>
                         <tr>
                             <td class="table-column-head orientations">Left</td>
-                            <td data-label="Before"><?php echo $row4['1']; ?></td>
+                            <td id=leftBefore" class="green" data-label="Before">
+                                <?php echo $row4['1'];?></td>
                             <td data-label="Target">-0°40' +/-0°30'</td>
                             <td data-label="Actual"><?php echo $row4['2']; ?></td>
                         </tr>
