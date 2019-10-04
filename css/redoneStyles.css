@@ -128,8 +128,10 @@ table tr {
     }
 
     table thead {
-        display: None /* no header */
+
+        display: none /* no header */
     }
+
 
     table tr { /*styling for each row*/
         display: block; /*sets up for 1 element per line*/

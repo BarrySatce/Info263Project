@@ -1,14 +1,26 @@
-//document.getElementById("demo").innerHTML = "Hello, World!";
-
-$("#demo").html("Hello, World!");
-
 $(".green").css("background-color", "green");
 
 $(document).ready(function () {
-    var a = $(".green").text()
-    console.log(a)
+
 })
 
-function checkAgainstTarget(min, max, id) {
-    console.log($(id).text())
-}
+
+
+//Submits Form and loads it in page using AJAX
+$("#searchForm").submit(function(e){
+    var value = $("#receiptID").val();
+    if (value){
+        $.post(
+            'tables.php',
+            $(this).serialize(),
+            function( data, textStatus, jQxhr ){
+                $('#requestData').html( data );
+            },
+        )
+            .fail(function( jqXhr, textStatus, errorThrown ){
+                console.log( errorThrown );
+            });
+
+        e.preventDefault();
+    }
+});
