@@ -112,11 +112,9 @@ require_once('./request/search_requests.php');
 
     <div class="tab-pane fade table-hover" id="alignment" role="tabpanel" aria-labelledby="alignment-tab">
         <header class="header">Back Axle</header>
-        <header class="car_part">Camber</header>
+
         <table class="table">
-            <thead class="thead-dark">
-            <th colspan="4">Camber</th>
-            </thead>
+            <header class="car_part">Camber</header>
             <thead class="thead-dark">
             <th>Orientations</th>
             <th>Before</th>
@@ -147,8 +145,8 @@ require_once('./request/search_requests.php');
         </table>
 
         <table class="table">
+            <header class="car_part">Toe</header>
             <thead class="thead-dark">
-            <th class="maxwidth-title">Toe</th>
             <th>Orientations</th>
             <th>Before</th>
             <th>Target</th>
@@ -156,21 +154,18 @@ require_once('./request/search_requests.php');
             </thead>
             <tbody>
             <tr>
-                <td data-label="Toe" class="table-no-underline background">&nbsp;</td>
                 <td class="table-column-head orientations">Left</td>
                 <td data-label="Before"><?php echo $alignmentRow['7']; ?></td>
                 <td data-label="Target" class="table-no-underline target">1.5mm +/-1.00</td>
                 <td data-label="Actual"><?php echo $alignmentRow['8']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Right</td>
                 <td data-label="Before"><?php echo $alignmentRow['9']; ?></td>
-                <td class="noShow target"></td>
+                <td data-label="Target" class="table-no-underline target">1.5mm +/-1.00</td>
                 <td data-label="Actual"><?php echo $alignmentRow['10']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Total</td>
                 <td data-label="Before"><?php echo $alignmentRow['11']; ?></td>
                 <td data-label="Target" class="target">3mm +/-2.0mm</td>
@@ -178,27 +173,22 @@ require_once('./request/search_requests.php');
             </tr>
             </tbody>
         </table>
+
         <table class="table">
+            <header class="car_part">Geometrical Driving Axis</header>
             <thead class="thead-dark">
-            <th class="maxwidth-title">Geometrical driving axis</th>
-            <th>&nbsp;</th>
             <th>Before</th>
             <th>Target</th>
             <th>Actual</th>
             </thead>
             <tbody>
             <tr>
-                <td data-label="Geometrical Driving Axis"
-                    class="table-no-underline noRightBorder background">&nbsp;
-                </td>
-                <td class="table-column-head noRightBorder maxwidth-empty-second orientations noShow">
-                    &nbsp;
-                </td>
                 <td data-label="Before"><?php echo $alignmentRow['13']; ?></td>
                 <td data-label="Target" class="target">0°00'</td>
                 <td data-label="Actual"><?php echo $alignmentRow['14']; ?></td>
             </tbody>
         </table>
+
         <header class="header">Front Axle</header>
         <table class="table">
             <thead class="thead-dark">
