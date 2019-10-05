@@ -11,6 +11,7 @@ body {
     padding-bottom: 5px;
     font-size: 40px;
     background-color: darkgrey;
+    color: white;
 }
 
 .car_part{
@@ -19,8 +20,8 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 25px;
-    background-color: greenyellow;
-    color: blue;
+    background-color: dimgrey;
+    color: white;
 }
 
 

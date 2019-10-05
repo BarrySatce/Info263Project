@@ -111,6 +111,7 @@ require_once('./request/search_requests.php');
     </div>
 
     <div class="tab-pane fade table-hover" id="alignment" role="tabpanel" aria-labelledby="alignment-tab">
+
         <header class="header">Back Axle</header>
 
         <table class="table">
@@ -190,9 +191,10 @@ require_once('./request/search_requests.php');
         </table>
 
         <header class="header">Front Axle</header>
+
         <table class="table">
+            <header class="car_part">Camber</header>
             <thead class="thead-dark">
-            <th class="maxwidth-title">Camber</th>
             <th>Orientations</th>
             <th>Before</th>
             <th>Target</th>
@@ -200,21 +202,18 @@ require_once('./request/search_requests.php');
             </thead>
             <tbody>
             <tr>
-                <td data-label="Camber" class="table-no-underline background">&nbsp;</td>
                 <td class="table-column-head orientations">Left</td>
                 <td data-label="Before"><?php echo $alignmentRow['15']; ?></td>
                 <td data-label="Target" class="table-no-underline target">0°00' +/-0°30'</td>
                 <td data-label="Actual"><?php echo $alignmentRow['16']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Right</td>
                 <td data-label="Before"><?php echo $alignmentRow['17']; ?></td>
-                <td class="noShow target"></td>
+                <td data-label="Target" class="table-no-underline target">0°00' +/-0°30'</td>
                 <td data-label="Actual"><?php echo $alignmentRow['18']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Cross</td>
                 <td data-label="Before"><?php echo $alignmentRow['19']; ?></td>
                 <td data-label="Target" class="target">0°00' +/-0°30'</td>
@@ -222,9 +221,10 @@ require_once('./request/search_requests.php');
             </tr>
             </tbody>
         </table>
+
         <table class="table">
+            <header class="car_part">Caster</header>
             <thead class="thead-dark">
-            <th class="maxwidth-title">Caster</th>
             <th>Orientations</th>
             <th>Before</th>
             <th>Target</th>
@@ -232,21 +232,18 @@ require_once('./request/search_requests.php');
             </thead>
             <tbody>
             <tr>
-                <td data-label="Caster" class="table-no-underline background">&nbsp;</td>
                 <td class="table-column-head orientations">Left</td>
                 <td data-label="Before"><?php echo $alignmentRow['21']; ?></td>
                 <td data-label="Target" class="table-no-underline target">2°35' +/-0°30'</td>
                 <td data-label="Actual"><?php echo $alignmentRow['22']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Right</td>
                 <td data-label="Before"><?php echo $alignmentRow['23']; ?></td>
-                <td class="noShow target"></td>
+                <td data-label="Target" class="table-no-underline target">2°35' +/-0°30'</td>
                 <td data-label="Actual"><?php echo $alignmentRow['24']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Cross</td>
                 <td data-label="Before"><?php echo $alignmentRow['25']; ?></td>
                 <td data-label="Target" class="target">0°00' +/-0°30'</td>
@@ -254,9 +251,10 @@ require_once('./request/search_requests.php');
             </tr>
             </tbody>
         </table>
+
         <table class="table">
+            <header class="car_part">SAI</header>
             <thead class="thead-dark">
-            <th class="maxwidth-title">SAI</th>
             <th>Orientations</th>
             <th>Before</th>
             <th>Target</th>
@@ -264,21 +262,18 @@ require_once('./request/search_requests.php');
             </thead>
             <tbody>
             <tr>
-                <td data-label="SAI" class="table-no-underline background">&nbsp;</td>
                 <td class="table-column-head orientations">Left</td>
                 <td data-label="Before"><?php echo $alignmentRow['27']; ?></td>
                 <td data-label="Target" class="table-no-underline target">12°40' +/-0°45</td>
                 <td data-label="Actual"><?php echo $alignmentRow['28']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Right</td>
                 <td data-label="Before"><?php echo $alignmentRow['29']; ?></td>
-                <td class="noShow target"></td>
+                <td data-label="Target" class="table-no-underline target">12°40' +/-0°45</td>
                 <td data-label="Actual"><?php echo $alignmentRow['30']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Cross</td>
                 <td data-label="Before"><?php echo $alignmentRow['31']; ?></td>
                 <td data-label="Target" class="target">0°00'</td>
@@ -286,9 +281,10 @@ require_once('./request/search_requests.php');
             </tr>
             </tbody>
         </table>
+
         <table class="table">
+            <header class="car_part">Track Differential Angle</header>
             <thead class="thead-dark">
-            <th class="maxwidth-title">Track differential angle</th>
             <th>Orientations</th>
             <th>Before</th>
             <th>Target</th>
@@ -296,14 +292,12 @@ require_once('./request/search_requests.php');
             </thead>
             <tbody>
             <tr>
-                <td data-label="Track Differential Angle" class="table-no-underline background">&nbsp;</td>
                 <td class="table-column-head orientations">Left</td>
                 <td data-label="Before"><?php echo $alignmentRow['33']; ?></td>
                 <td class="table-no-underline noShow target"></td>
                 <td data-label="Actual"><?php echo $alignmentRow['34']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Right</td>
                 <td data-label="Before"><?php echo $alignmentRow['35']; ?></td>
                 <td class="noShow target"></td>
@@ -311,9 +305,10 @@ require_once('./request/search_requests.php');
             </tr>
             </tbody>
         </table>
+
         <table class="table">
+            <header class="car_part">Toe</header>
             <thead class="thead-dark">
-            <th class="maxwidth-title">Toe</th>
             <th>Orientations</th>
             <th>Before</th>
             <th>Target</th>
@@ -321,21 +316,18 @@ require_once('./request/search_requests.php');
             </thead>
             <tbody>
             <tr>
-                <td data-label="Toe" class="table-no-underline background">&nbsp;</td>
                 <td class="table-column-head orientations">Left</td>
                 <td data-label="Before"><?php echo $alignmentRow['37']; ?></td>
                 <td data-label="Target" class="table-no-underline target">0.5mm +/-1.0mm</td>
                 <td data-label="Actual"><?php echo $alignmentRow['38']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Right</td>
                 <td data-label="Before"><?php echo $alignmentRow['39']; ?></td>
-                <td class="noShow target"></td>
+                <td data-label="Target" class="table-no-underline target">0.5mm +/-1.0mm</td>
                 <td data-label="Actual"><?php echo $alignmentRow['40']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Cross</td>
                 <td data-label="Before"><?php echo $alignmentRow['41']; ?></td>
                 <td data-label="Target">1mm +/-2.0mm</td>
@@ -343,28 +335,27 @@ require_once('./request/search_requests.php');
             </tr>
             </tbody>
         </table>
+
         <table class="table">
+            <header class="car_part">Setback</header>
             <thead class="thead-dark">
-            <th class="maxwidth-title">Setback</th>
-            <th>&nbsp;</th>
             <th>Before</th>
             <th>Target</th>
             <th>Actual</th>
             </thead>
             <tbody>
             <tr>
-                <td data-label="Setback" class="table-no-underline noRightBorder background">&nbsp;</td>
-                <td class="table-column-head noRightBorder maxwidth-empty-second noShow orientations">
-                    &nbsp;
-                </td>
                 <td data-label="Before"><?php echo $alignmentRow['43']; ?></td>
                 <td data-label="Target" class="target">0°00'</td>
                 <td class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['44']; ?></td>
+            </tr>
             </tbody>
         </table>
+
         <table class="table">
+            <header class="car_part">Max Steering Lock</header>
             <thead class="thead-dark">
-            <th class="maxwidth-title">Max steering lock</th>
+            <th class="maxwidth-title">Side</th>
             <th>Orientations</th>
             <th>Before</th>
             <th>Target</th>
@@ -372,8 +363,7 @@ require_once('./request/search_requests.php');
             </thead>
             <tbody>
             <tr>
-                <td data-label="Max Steering Lock" class="table-no-underline background">Left Steer</td>
-                <!--<td data-label="Left Steer" class="bigNoShow"></td>-->
+                <td data-label="Side" class="table-no-underline background">Left Steer</td>
                 <td class="table-column-head orientations">Left</td>
                 <td data-label="Before"><?php echo $alignmentRow['45']; ?></td>
                 <td data-label="Target" class="table-no-underline target">-41°00' +/-1°30'</td>
@@ -387,7 +377,7 @@ require_once('./request/search_requests.php');
                 <td data-label="Actual"><?php echo $alignmentRow['48']; ?></td>
             </tr>
             <tr>
-                <td class="table-no-underline background">Right Steer</td>
+                <td data-label="Side" class="table-no-underline background">Right Steer</td>
                 <td class="table-column-head orientations">Left</td>
                 <td data-label="Before"><?php echo $alignmentRow['49']; ?></td>
                 <td data-label="Target" class="table-no-underline target noShow">-41°00' +/-1°30'</td>
