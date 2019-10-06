@@ -123,24 +123,24 @@ require_once('./request/search_requests.php');
             <th>Actual</th>
             </thead>
             <tbody>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Left</td>
-                <td id=leftBefore" class="green" data-label="Before">
+                <td class="before" data-label="Before">
                     <?php echo $alignmentRow['1']; ?></td>
-                <td data-label="Target">-0°40' +/-0°30'</td>
-                <td data-label="Actual"><?php echo $alignmentRow['2']; ?></td>
+                <td class="target" data-label="Target">-0°40' +/-0°30'</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['2']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Right</td>
-                <td data-label="Before"><?php echo $alignmentRow['3']; ?></td>
-                <td data-label="Target">-0°40' +/-0°30'</td>
-                <td data-label="Actual"><?php echo $alignmentRow['4']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['3']; ?></td>
+                <td class="target" data-label="Target">-0°40' +/-0°30'</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['4']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Cross</td>
-                <td data-label="Before"><?php echo $alignmentRow['5']; ?></td>
-                <td data-label="Target">0°00' +/-0°30'</td>
-                <td class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['6']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['5']; ?></td>
+                <td class="target" data-label="Target">0°00' +/-0°30'</td>
+                <td class="after underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['6']; ?></td>
             </tr>
             </tbody>
         </table>
@@ -154,23 +154,23 @@ require_once('./request/search_requests.php');
             <th>Actual</th>
             </thead>
             <tbody>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Left</td>
-                <td data-label="Before"><?php echo $alignmentRow['7']; ?></td>
-                <td data-label="Target" class="table-no-underline target">1.5mm +/-1.00</td>
-                <td data-label="Actual"><?php echo $alignmentRow['8']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['7']; ?></td>
+                <td class="target" data-label="Target" class="table-no-underline target">1.5mm +/-1.00</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['8']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Right</td>
-                <td data-label="Before"><?php echo $alignmentRow['9']; ?></td>
-                <td data-label="Target" class="table-no-underline target">1.5mm +/-1.00</td>
-                <td data-label="Actual"><?php echo $alignmentRow['10']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['9']; ?></td>
+                <td class="target table-no-underline tgt" data-label="Target">1.5mm +/-1.00</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['10']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Total</td>
-                <td data-label="Before"><?php echo $alignmentRow['11']; ?></td>
-                <td data-label="Target" class="target">3mm +/-2.0mm</td>
-                <td class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['12']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['11']; ?></td>
+                <td class="target" data-label="Target" class="target">3mm +/-2.0mm</td>
+                <td class="after underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['12']; ?></td>
             </tr>
             </tbody>
         </table>
@@ -183,10 +183,10 @@ require_once('./request/search_requests.php');
             <th>Actual</th>
             </thead>
             <tbody>
-            <tr>
-                <td data-label="Before"><?php echo $alignmentRow['13']; ?></td>
-                <td data-label="Target" class="target">0°00'</td>
-                <td data-label="Actual"><?php echo $alignmentRow['14']; ?></td>
+            <tr class="item">
+                <td class="before" data-label="Before"><?php echo $alignmentRow['13']; ?></td>
+                <td class="target tgt" data-label="Target">0°00'</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['14']; ?></td>
             </tbody>
         </table>
 
@@ -201,23 +201,23 @@ require_once('./request/search_requests.php');
             <th>Actual</th>
             </thead>
             <tbody>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Left</td>
-                <td data-label="Before"><?php echo $alignmentRow['15']; ?></td>
-                <td data-label="Target" class="table-no-underline target">0°00' +/-0°30'</td>
-                <td data-label="Actual"><?php echo $alignmentRow['16']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['15']; ?></td>
+                <td class="target table-no-underline tgt" data-label="Target">0°00' +/-0°30'</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['16']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Right</td>
-                <td data-label="Before"><?php echo $alignmentRow['17']; ?></td>
-                <td data-label="Target" class="table-no-underline target">0°00' +/-0°30'</td>
-                <td data-label="Actual"><?php echo $alignmentRow['18']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['17']; ?></td>
+                <td class="target table-no-underline tgt" data-label="Target">0°00' +/-0°30'</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['18']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Cross</td>
-                <td data-label="Before"><?php echo $alignmentRow['19']; ?></td>
-                <td data-label="Target" class="target">0°00' +/-0°30'</td>
-                <td class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['20']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['19']; ?></td>
+                <td class="target tgt" data-label="Target">0°00' +/-0°30'</td>
+                <td class="after" class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['20']; ?></td>
             </tr>
             </tbody>
         </table>
@@ -231,23 +231,23 @@ require_once('./request/search_requests.php');
             <th>Actual</th>
             </thead>
             <tbody>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Left</td>
-                <td data-label="Before"><?php echo $alignmentRow['21']; ?></td>
-                <td data-label="Target" class="table-no-underline target">2°35' +/-0°30'</td>
-                <td data-label="Actual"><?php echo $alignmentRow['22']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['21']; ?></td>
+                <td class="target tgt table-no-underline" data-label="Target">2°35' +/-0°30'</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['22']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Right</td>
-                <td data-label="Before"><?php echo $alignmentRow['23']; ?></td>
-                <td data-label="Target" class="table-no-underline target">2°35' +/-0°30'</td>
-                <td data-label="Actual"><?php echo $alignmentRow['24']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['23']; ?></td>
+                <td class="target table-no-underline tgt" data-label="Target">2°35' +/-0°30'</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['24']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Cross</td>
-                <td data-label="Before"><?php echo $alignmentRow['25']; ?></td>
-                <td data-label="Target" class="target">0°00' +/-0°30'</td>
-                <td class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['26']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['25']; ?></td>
+                <td class="target tgt" data-label="Target">0°00' +/-0°30'</td>
+                <td class="after" class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['26']; ?></td>
             </tr>
             </tbody>
         </table>
@@ -261,23 +261,23 @@ require_once('./request/search_requests.php');
             <th>Actual</th>
             </thead>
             <tbody>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Left</td>
-                <td data-label="Before"><?php echo $alignmentRow['27']; ?></td>
-                <td data-label="Target" class="table-no-underline target">12°40' +/-0°45</td>
-                <td data-label="Actual"><?php echo $alignmentRow['28']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['27']; ?></td>
+                <td class="target table-no-underline tgt" data-label="Target">12°40' +/-0°45</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['28']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Right</td>
-                <td data-label="Before"><?php echo $alignmentRow['29']; ?></td>
-                <td data-label="Target" class="table-no-underline target">12°40' +/-0°45</td>
-                <td data-label="Actual"><?php echo $alignmentRow['30']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['29']; ?></td>
+                <td class="target table-no-underline tgt" data-label="Target">12°40' +/-0°45</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['30']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Cross</td>
-                <td data-label="Before"><?php echo $alignmentRow['31']; ?></td>
-                <td data-label="Target" class="target">0°00'</td>
-                <td class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['32']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['31']; ?></td>
+                <td class="target tgt" data-label="Target">0°00'</td>
+                <td class="after underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['32']; ?></td>
             </tr>
             </tbody>
         </table>
@@ -315,23 +315,23 @@ require_once('./request/search_requests.php');
             <th>Actual</th>
             </thead>
             <tbody>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Left</td>
-                <td data-label="Before"><?php echo $alignmentRow['37']; ?></td>
-                <td data-label="Target" class="table-no-underline target">0.5mm +/-1.0mm</td>
-                <td data-label="Actual"><?php echo $alignmentRow['38']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['37']; ?></td>
+                <td class="target table-no-underline tgt" data-label="Target">0.5mm +/-1.0mm</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['38']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Right</td>
-                <td data-label="Before"><?php echo $alignmentRow['39']; ?></td>
-                <td data-label="Target" class="table-no-underline target">0.5mm +/-1.0mm</td>
-                <td data-label="Actual"><?php echo $alignmentRow['40']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['39']; ?></td>
+                <td class="target table-no-underline tgt" data-label="Target">0.5mm +/-1.0mm</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['40']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-column-head orientations">Cross</td>
-                <td data-label="Before"><?php echo $alignmentRow['41']; ?></td>
-                <td data-label="Target">1mm +/-2.0mm</td>
-                <td class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['42']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['41']; ?></td>
+                <td class="target" data-label="Target">1mm +/-2.0mm</td>
+                <td class="after underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['42']; ?></td>
             </tr>
             </tbody>
         </table>
@@ -344,10 +344,10 @@ require_once('./request/search_requests.php');
             <th>Actual</th>
             </thead>
             <tbody>
-            <tr>
-                <td data-label="Before"><?php echo $alignmentRow['43']; ?></td>
-                <td data-label="Target" class="target">0°00'</td>
-                <td class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['44']; ?></td>
+            <tr class="item">
+                <td class="before" data-label="Before"><?php echo $alignmentRow['43']; ?></td>
+                <td class="target tgt" data-label="Target">0°00'</td>
+                <td class="after underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['44']; ?></td>
             </tr>
             </tbody>
         </table>
@@ -362,33 +362,33 @@ require_once('./request/search_requests.php');
             <th>Actual</th>
             </thead>
             <tbody>
-            <tr>
+            <tr class="item">
                 <td data-label="Side" class="table-no-underline background">Left Steer</td>
                 <td class="table-column-head orientations">Left</td>
-                <td data-label="Before"><?php echo $alignmentRow['45']; ?></td>
-                <td data-label="Target" class="table-no-underline target">-41°00' +/-1°30'</td>
-                <td data-label="Actual"><?php echo $alignmentRow['46']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['45']; ?></td>
+                <td class="target table-no-underline tgt" data-label="Target">-41°00' +/-1°30'</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['46']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Right</td>
-                <td data-label="Before"><?php echo $alignmentRow['47']; ?></td>
-                <td data-label="Target" class="target">33°00' +/-1°30'</td>
-                <td data-label="Actual"><?php echo $alignmentRow['48']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['47']; ?></td>
+                <td class="target tgt" data-label="Target"=>33°00' +/-1°30'</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['48']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td data-label="Side" class="table-no-underline background">Right Steer</td>
                 <td class="table-column-head orientations">Left</td>
-                <td data-label="Before"><?php echo $alignmentRow['49']; ?></td>
-                <td data-label="Target" class="table-no-underline target noShow">-41°00' +/-1°30'</td>
-                <td data-label="Actual"><?php echo $alignmentRow['50']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['49']; ?></td>
+                <td class="target table-no-underline tgt" data-label="Target">-41°00' +/-1°30'</td>
+                <td class="after" data-label="Actual"><?php echo $alignmentRow['50']; ?></td>
             </tr>
-            <tr>
+            <tr class="item">
                 <td class="table-no-underline noShow">&nbsp;</td>
                 <td class="table-column-head orientations">Right</td>
-                <td data-label="Before"><?php echo $alignmentRow['51']; ?></td>
-                <td class="noShow target">33°00' +/-1°30'</td>
-                <td class="underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['52']; ?></td>
+                <td class="before" data-label="Before"><?php echo $alignmentRow['51']; ?></td>
+                <td class="target noShow targetThis">33°00' +/-1°30'</td>
+                <td class="after underPadding bottomTD" data-label="Actual"><?php echo $alignmentRow['52']; ?></td>
             </tr>
             </tbody>
         </table>
@@ -405,3 +405,4 @@ require_once('./request/search_requests.php');
 <!-- javascript file -->
 <script src="jquery-3.4.1.min.js"></script>
 <script src="scripts/scripts.js"></script>
+<script> checkVals();</script>
