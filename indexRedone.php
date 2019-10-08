@@ -23,8 +23,8 @@
 <div class="container-fluid">
     <!-- This is the first row, it will contain the logo, and the page Header (or a banner if we choose) -->
     <div class="row my-5" id="header">
-        <div class="col-2">Image goes here</div>
-        <div class="col-10">Banner/Header Goes here</div>
+        <div class="col-3"><img src="tyres.png" class="img-fluid"><b class="caret"></b></a></div>
+        <div class="col-4"><img src="tyre_town.png" class="img-fluid"><b class="caret"></b></a></div>
     </div>
 
     <!-- This is the second row, it will contain the navigation bar -->
