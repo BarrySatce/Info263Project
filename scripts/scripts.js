@@ -15,20 +15,11 @@ function checkVals() {
         var max = targets[0] + targets[1];
 
         //If both numbers are negative....
-        if (min < 1 || max < 1) {
-            if (before < min || before > max) {
-                $this.find(".before").css("background-color", "red");
-            }
-            if (after < min || after > max) {
-                $this.find(".after").css("background-color", "red");
-            }
-        } else {
-            if (before < min || before > max) {
-                $this.find(".before").css("background-color", "red");
-            }
-            if (after < min || after > max) {
-                $this.find(".after").css("background-color", "red");
-            }
+        if (before < min || before > max) {
+            $this.find(".before").css("background-color", "red");
+        }
+        if (after < min || after > max) {
+            $this.find(".after").css("background-color", "red");
         }
 
     });
@@ -39,14 +30,12 @@ function getTarget(target) {
     if (target.includes("°" && "+/-")){
         //check to see if target is in mm
         if (target.includes("m")) {
-            values = target.split("mm +/-")
-            console.log(values);
+            values = target.split("mm +/-");
             targets[0] = parseFloat(values[0]);
             targets[1] = parseFloat(values[1]);
             return targets;
         }//if not mm its degrees
         else{
-            console.log("A", target)
             values = target.split("' +/-")
             targets[0] = parseFloat(values[0].replace("°", "")) * 0.01;
             targets[1] = parseFloat(values[1].replace("°", "")) * 0.01;
@@ -55,7 +44,6 @@ function getTarget(target) {
 
     }//checks for singlular target
     else if (target.includes('°')){
-        console.log("B")
         targets[0]=0;
         targets[1]=0;
         return targets;
@@ -78,6 +66,5 @@ $("#searchForm").submit(function (e) {
 
         e.preventDefault();
     }
-    console.log($("#leftBefore").text());
 
 });
