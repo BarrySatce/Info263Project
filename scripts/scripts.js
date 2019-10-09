@@ -16,10 +16,10 @@ function checkVals() {
 
         //If both numbers are negative....
         if (before < min || before > max) {
-            $this.find(".before").css("background-color", "red");
+            $this.find(".before").css("color", "red");
         }
         if (after < min || after > max) {
-            $this.find(".after").css("background-color", "red");
+            $this.find(".after").css("color", "red");
         }
 
     });

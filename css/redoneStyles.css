@@ -38,12 +38,14 @@ body {
     border: 0; /* no border */
     border-collapse: collapse;
     width: 100%;
+    background-color: lightgrey;
 
 }
 table td{
     padding-top: 10px;
     padding: 5px;
     text-align: center;
+    border: 1px solid black;
 
 }
 table th{
@@ -69,26 +71,28 @@ table tr {
     font-weight: bold;
 }
 
+.before{
+    color: forestgreen;
+}
+
+.after{
+    color: forestgreen;
+}
+
+
 
 @media screen and (min-width: 996px){
 
     .table-no-underline {
-        border-bottom: None;
     }
 
     .orientations{
         width: 107px;
     }
 
-    .bigNoShow {
-        display: none;
-    }
-
-
 
     table.alignment td {
         border-right: 2px solid darkgrey;
-
     }
 
     .maxwidth-empty-second{
@@ -143,8 +147,7 @@ table tr {
     }
 
     table td { /*styling for each individual cell*/
-        border-right: none;
-        border-top: 1px solid darkgrey;
+        border-style: none;: 1px solid black;
         display: block;
         position: relative;
         padding-bottom: 10px;
