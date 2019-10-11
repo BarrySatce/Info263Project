@@ -4,19 +4,19 @@ require_once('./request/search_requests.php');
 <link rel="stylesheet" href="css/redoneStyles.css">
 
 <ul class="nav nav-tabs" id="invoiceInfoTabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item col-12 col-lg-2">
         <a class="nav-link active" id="customer-tab" data-toggle="tab" href="#customer" role="tab"
            aria-controls="home" aria-selected="true">Customer Info</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item col-12 col-lg-2">
         <a class="nav-link" id="invoice-tab" data-toggle="tab" href="#invoice" role="tab"
            aria-controls="invoice" aria-selected="false">Invoice Info</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item col-12 col-lg-2">
         <a class="nav-link" id="branch-tab" data-toggle="tab" href="#branch" role="tab"
            aria-controls="branch" aria-selected="false">Branch Info</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item col-12 col-lg-2">
         <a class="nav-link" id="alignment-tab" data-toggle="tab" href="#alignment" role="tab"
            aria-controls="alignment" aria-selected="false">Alignment Info</a>
     </li>

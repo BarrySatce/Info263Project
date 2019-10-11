@@ -4,6 +4,17 @@ body {
     font-family: "Verdana", Times, serif;
 }
 
+a{
+    color: black;
+    background-color: grey;
+}
+
+a:hover{
+    color: black;
+    background-color: lightgrey;
+}
+
+
 .header{
     text-align: center;
     font-weight: bold;
@@ -123,6 +134,10 @@ table tr {
 /* CSS response to small screen */
 
 @media screen and (max-width: 995px) {
+
+    .nav-item{
+        background-color: gray;
+    }
 
     .bottomTD{
         border-bottom: none;
