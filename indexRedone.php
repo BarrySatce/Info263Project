@@ -13,28 +13,26 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 
-    <!-- css style sheet -->
+    <!-- CSS style sheet -->
     <link rel="stylesheet" href="css/redoneStyles.css">
 
 </head>
 <body>
-<!-- This container contains everything on the page
-     The page is split up into 4 'Rows', each with their own amount of columns-->
 <div class="container-fluid">
-    <!-- This is the first row, it will contain the logo, and the page Header (or a banner if we choose) -->
+    <!-- Logo and title -->
     <div class="row my-5" id="header">
         <div class="col-3"><img src="tyres.png" class="img-fluid"><b class="caret"></b></a></div>
         <div class="col-4"><img src="tyre_town.png" class="img-fluid"><b class="caret"></b></a></div>
     </div>
 
-    <!-- This is the second row, it will contain the navigation bar -->
+    <!-- Site navigation buttons -->
     <div class="row my-5 my-auto text-center" id="navigation">
         <div class="col-4 border">Home Button</div>
         <div class="col-4 border">Spare Button</div>
         <div class="col-4 border">Spare Button</div>
     </div>
 
-    <!-- This is the third row, it contains the search bar -->
+    <!-- Search Bar -->
     <div class="row my-5" id="search">
         <div class="container">
             <br/>
@@ -50,7 +48,8 @@
                                        name="input" id="receiptID" placeholder="Enter invoice number...">
                             </div>
                             <div class="col-auto">
-                                <button id="submitButton" class="btn btn-lg btn-success" type="submit" name="submitButton"
+                                <button id="submitButton" class="btn btn-lg btn-success" type="submit"
+                                        name="submitButton"
                                         value="Submit">Search
                                 </button>
                             </div>
@@ -61,26 +60,16 @@
         </div>
     </div>
 
-    <!-- Original search button, for reference
-    <div class="row my-5" id="search">
-        <div class="col my-auto text-center">
-            <form method="post" action="indexRedone.php">
-                <input type="text" name="input" size="25" id="receiptID" placeholder="Enter Invoice Number">
-                <input id="submitButton" type="submit" name="submitButton" value="Submit">
-        </div>
-    </div>
-    -->
-
-    <!-- This is the forth row, it will have all the invoice options on the left,
-         when on is clicked a table will be shown to the right containing that info -->
+    <!-- Container for table content, filled on successful invoice search -->
     <div class="row my-5" id="main">
         <div id="requestData" class="col">
             Please enter an invoice number to start
         </div>
     </div>
 </div>
-<h1 id="demo"></h1>
 </body>
+
+<!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -88,8 +77,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<!-- javascript file -->
-<script src="jquery-3.4.1.min.js"></script>
 <script src="scripts/scripts.js"></script>
 
 </html>

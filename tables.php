@@ -1,8 +1,14 @@
+<!-- Table navigation and table content page, loaded on successful invoice search -->
+
+<!-- PHP to fill table data -->
 <?php
 require_once('./request/search_requests.php');
 ?>
+
+<!-- CSS style sheet -->
 <link rel="stylesheet" href="css/redoneStyles.css">
 
+<!-- Navigation tabs -->
 <ul class="nav nav-tabs" id="invoiceInfoTabs" role="tablist">
     <li class="nav-item col-12 col-lg-2">
         <a class="nav-link active" id="customer-tab" data-toggle="tab" href="#customer" role="tab"
@@ -21,7 +27,11 @@ require_once('./request/search_requests.php');
            aria-controls="alignment" aria-selected="false">Alignment Info</a>
     </li>
 </ul>
+
+<!-- Content for tabs -->
 <div class="tab-content" id="myTabContent">
+
+    <!-- Content for Customer Tab -->
     <div class="tab-pane fade show active" id="customer" role="tabpanel" aria-labelledby="contact-tab">
         <table class="table">
             <thead class="thead-dark">
@@ -47,10 +57,11 @@ require_once('./request/search_requests.php');
             <td data-label="Body Type"><?php echo $customerRow['BODY TYPE']; ?></td>
             <td data-label="Chassis Number"><?php echo $customerRow['CHASSIS NUMBER']; ?></td>
             <td data-label="Odometer Reading"><?php echo $customerRow['ODOMETER READING']; ?></td>
-            <!--<? //echo $custRow ?>-->
             </tbody>
         </table>
     </div>
+
+    <!-- Content for Invoice Tab -->
     <div class="tab-pane fade" id="invoice" role="tabpanel" aria-labelledby="invoice-tab">
         <table class="table">
             <thead class="thead-dark">
@@ -83,6 +94,8 @@ require_once('./request/search_requests.php');
             </tbody>
         </table>
     </div>
+
+    <!-- Content for Branch Tab -->
     <div class="tab-pane fade" id="branch" role="tabpanel" aria-labelledby="branch-tab">
         <table class="table">
             <thead class="thead-dark">
@@ -110,10 +123,9 @@ require_once('./request/search_requests.php');
         </table>
     </div>
 
+    <!-- Content for Alignment Tab -->
     <div class="tab-pane fade table-hover" id="alignment" role="tabpanel" aria-labelledby="alignment-tab">
-
         <header class="header">Back Axle</header>
-
         <table class="table">
             <header class="car_part">Camber</header>
             <thead class="thead-dark">
@@ -395,6 +407,7 @@ require_once('./request/search_requests.php');
     </div>
 </div>
 
+<!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -403,6 +416,6 @@ require_once('./request/search_requests.php');
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <!-- javascript file -->
-<script src="jquery-3.4.1.min.js"></script>
 <script src="scripts/scripts.js"></script>
+<!-- Call to check alignment table data -->
 <script> checkVals();</script>
