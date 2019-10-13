@@ -48,11 +48,11 @@
     </nav>
 
     <!-- Search Bar -->
-    <div class="row my-5" id="search">
+    <div class="row my-2" id="search">
         <div class="container">
             <br/>
             <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-8">
+                <div class="col-14 col-md-10 col-lg-10">
                     <form id="searchForm" class="card card-sm" method="post">
                         <div class="card-body row no-gutters align-items-center">
                             <div class="col-auto">
@@ -60,12 +60,12 @@
                             </div>
                             <div class="col">
                                 <input class="form-control form-control-lg form-control-borderless" type="text"
-                                       name="input" id="receiptID" placeholder="Enter invoice number...">
+                                       name="input" id="receiptID" placeholder="Enter number...">
                             </div>
                             <div class="col-auto">
                                 <button id="submitButton" class="btn btn-lg btn-success" type="submit"
                                         name="submitButton"
-                                        value="Submit">Search
+                                        value="Submit">Go
                                 </button>
                             </div>
                         </div>
@@ -74,6 +74,8 @@
             </div>
         </div>
     </div>
+
+
 
     <!-- Container for table content, filled on successful invoice search -->
     <div class="row my-5" id="main">
