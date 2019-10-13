@@ -9,15 +9,15 @@
 
 /* Navigation Bar CSS */
 .navbar{
-    background-color: #5a6268;
+    background-color: lightsteelblue;
 }
 
 li.navi:hover{
-    background-color: grey;
+    background-color: lightslategrey;
 }
 
 li.navi.active{
-    background-color: #e2e3e5;
+    background-color: lightslategrey;
 }
 
 
