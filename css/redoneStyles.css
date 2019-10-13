@@ -12,11 +12,11 @@
     background-color: #5a6268;
 }
 
-li:hover{
+li.navi:hover{
     background-color: grey;
 }
 
-li.active{
+li.navi.active{
     background-color: #e2e3e5;
 }
 

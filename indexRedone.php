@@ -34,13 +34,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item active navi">
                     <a class="nav-link" href="indexRedone.php">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item navi">
                     <a class="nav-link" href="#">Book Appointment</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item navi">
                     <a class="nav-link" href="#">About Us</a>
                 </li>
             </ul>
