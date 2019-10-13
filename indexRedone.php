@@ -18,19 +18,34 @@
 
 </head>
 <body>
+
 <div class="container-fluid">
     <!-- Logo and title -->
     <div class="row my-5" id="header">
-        <div class="col-3"><img src="tyres.png" class="img-fluid"><b class="caret"></b></a></div>
-        <div class="col-4"><img src="tyre_town.png" class="img-fluid"><b class="caret"></b></a></div>
+        <div class="col-12 col-lg-3"><img src="tyres.png" class="img-fluid"><b class="caret"></b></a></div>
+        <div class="col-12 col-lg-7"><h1 id="title">Tyre Town</h1></a></div>
     </div>
 
     <!-- Site navigation buttons -->
-    <div class="row my-5 my-auto text-center" id="navigation">
-        <div class="col-4 border">Home Button</div>
-        <div class="col-4 border">Spare Button</div>
-        <div class="col-4 border">Spare Button</div>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Pages</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="indexRedone.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Book Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Search Bar -->
     <div class="row my-5" id="search">

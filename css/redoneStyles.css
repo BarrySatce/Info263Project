@@ -1,3 +1,39 @@
+/* Title css*/
+#title{
+    text-align: center;
+    font-size: 600%;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* Navigation Bar CSS */
+.navbar{
+    background-color: #5a6268;
+}
+
+li:hover{
+    background-color: grey;
+}
+
+li.active{
+    background-color: #e2e3e5;
+}
+
+
+/* Search Bar CSS */
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* Page CSS */
 body {
     /* General layout of the site */
     padding-top: 5px; /* Gap between top and start of page */
@@ -5,13 +41,14 @@ body {
     font-family: "Verdana", Times, serif; /* Font of the site */
 }
 
-a{
+
+a.tbl{
     /* Tabs when inactive */
     color: black; /* Colour of text in tab when inactive */
     background-color: grey; /* Colour of tab when inactive */
 }
 
-a:hover{
+a.tbl:hover{
     /* Tabs when active */
     color: black; /* Colour of text on tab when hovered over */
     background-color: lightgrey; /* Colour of tab when hovered */
@@ -140,6 +177,9 @@ table tr {
 
 /* When width is less than 995px */
 @media screen and (max-width: 995px) {
+    #title{
+        font-size: 300%;
+    }
 
     .nav-item{
         /* Navigation of items */
@@ -225,16 +265,5 @@ table tr {
     table td:before {
         position: relative; /* Position is relative to previous position */
     }
-}
-
-/* Additional search Bar CSS */
-.form-control-borderless {
-    border: none;
-}
-
-.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
-    border: none;
-    outline: none;
-    box-shadow: none;
 }
 
