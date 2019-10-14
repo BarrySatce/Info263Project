@@ -48,34 +48,20 @@
     </nav>
 
     <!-- Search Bar -->
-    <div class="row my-2" id="search">
-        <div class="container">
-            <br/>
-            <div class="row justify-content-center">
-                <div class="col-14 col-md-10 col-lg-10">
-                    <form id="searchForm" class="card card-sm" method="post">
-                        <div class="card-body row no-gutters align-items-center">
-                            <div class="col-auto">
-                                <i class="fas fa-search h4 text-body"></i>
-                            </div>
-                            <div class="col">
-                                <input class="form-control form-control-lg form-control-borderless" type="text"
-                                       name="input" id="receiptID" placeholder="Enter number...">
-                            </div>
-                            <div class="col-auto">
-                                <button id="submitButton" class="btn btn-lg btn-success" type="submit"
-                                        name="submitButton"
-                                        value="Submit">Go
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <form id="searchForm" method="post">
+        <div class="row mb-4" id="search">
+            <div class="form-group col-md-9">
+                <input  type="text" class="form-control form-control-underlined"
+                        name="input" id="receiptID" placeholder="Enter Invoice Number...">
+            </div>
+            <div class="form-group col-md-3">
+                <button id="submitButton" class="btn btn-primary rounded-pill btn-block shadow-sm" type="submit"
+                        name="submitButton"
+                        value="Submit">Search
+                </button>
             </div>
         </div>
-    </div>
-
-
+    </form>
 
     <!-- Container for table content, filled on successful invoice search -->
     <div class="row my-5" id="main">
