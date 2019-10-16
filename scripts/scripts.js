@@ -14,7 +14,6 @@ function checkVals() {
         //Assigns max target range
         var max = targets[0] + targets[1];
 
-        //If both numbers are negative....
         if (before < min || before > max) {
             $this.find(".before").css("color", "red");
         }
@@ -53,7 +52,7 @@ function getTarget(target) {
 //Submits Form and loads it in page using AJAX
 $("#searchForm").submit(function (e) {
     var value = $("#receiptID").val();
-    if (value) {
+    if (value.length > 6) {
         $.post(
             'tables.php',
             $(this).serialize(),
