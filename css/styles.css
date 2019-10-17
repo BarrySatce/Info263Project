@@ -1,251 +1,261 @@
-.float-mid{
-    padding: 20px;
+/* Title css*/
+#title{
     text-align: center;
+    font-size: 600%;
+    font-style: italic;
+    font-weight: bold;
 }
 
+
+/* Navigation Bar CSS */
+.navbar{
+    background-color: #117a8b;
+}
+
+li.navi:hover{
+    background-color: lightslategrey;
+}
+
+li.navi.active{
+    background-color: lightgrey;
+}
+
+/* Search Bar CSS*/
+#searchForm{
+    padding-top: 10px;
+}
+
+/* Page CSS */
 body {
-    padding-top: 5px;
-    background-color: pink;
-    font-family: "Arial", Times, serif;
+    /* General layout of the site */
+    padding-top: 5px; /* Gap between top and start of page */
+    background-color: lightsteelblue; /* Colour of the site */
+    font-family: "Verdana", Times, serif; /* Font of the site */
+}
+
+
+a.tbl{
+    /* Tabs when inactive */
+    color: black; /* Colour of text in tab when inactive */
+    background-color: grey; /* Colour of tab when inactive */
+}
+
+a.tbl:hover{
+    /* Tabs when active */
+    color: black; /* Colour of text on tab when hovered over */
+    background-color: lightgrey; /* Colour of tab when hovered */
 }
 
 .header{
-    text-align: center;
-    font-weight: bold;
-    padding-top: 4px;
-    padding-bottom: 40px;
-    font-size: larger;
-    text-decoration: underline darkgrey;
+    /* Header layout used for axles */
+    text-align: center; /* Text location */
+    font-weight: bold; /* Text bolded */
+    padding-top: 5px; /* Padding on top */
+    padding-bottom: 5px; /* Padding on bottom */
+    font-size: 40px; /* Size of the text */
+    background-color: darkgrey; /* Header background */
+    color: white; /* Colour of text */
 }
 
-.ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+.car_part{
+    /* Header layout used for car part */
+    text-align: center; /* Text location */
+    font-weight: bold; /* Text bolded */
+    padding-top: 10px; /* Padding on top */
+    padding-bottom: 10px; /* Padding on bottom */
+    font-size: 25px; /* Size of the text */
+    background-color: dimgrey; /* Header background */
+    color: white; /* Colour of text */
 }
 
-/* Responsive table */
+.container-fluid{
+    /* Contains the table */
+    padding-left: 50px; /* Table left padding */
+    padding-right: 50px; /* Table right padding */
+}
 
 .table {
-    margin:0;
-    padding:25px;
-    border: 0; /* no border */
-    border-collapse: collapse;
-    width: 100%;
+    /* Table layout */
+    margin:0; /* No margin */
+    padding:25px; /* Padding size */
+    border: 0; /* No border */
+    border-collapse: collapse; /* Table collapses */
+    width: 100%; /* Table fulls the space */
+    background-color: lightgrey; /* Colour of background */
 }
+
 table td{
-    border-bottom: 2px solid darkgrey;
-    padding-top: 10px;
-    padding: 5px;
-    text-align: center;
+    /* Styling for each cell */
+    padding-top: 10px; /* Padding at top */
+    padding: 5px; /* Padding */
+    text-align: center; /* Text location */
+    border: 1px solid black; /* Boarder size and colour */
 }
+
 table th{
-    border-bottom: 2px solid darkgrey;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 5px;
+    /* Styling for each table head */
+    border-bottom: 2px solid darkgrey; /* Border size and colour */
+    text-align: center; /* Text location */
+    text-transform: uppercase; /* Text is uppercase */
+    padding: 5px; /* Padding size */
 }
+
 table tr {
-    padding: 5px;
+    /* Styling for each row */
+    padding: 5px; /* Padding size */
 }
 
 .table-header{
-    font-size: medium;
-    text-align: center;
-    font-weight: bold;
-    padding: 20px;
-    text-decoration: underline darkgrey;
+    /* Table header */
+    font-size: medium; /* Text size */
+    text-align: center; /* Text location */
+    font-weight: bold; /* Text bolded */
+    padding: 20px; /* Padding */
+    text-decoration: underline darkgrey; /* Decoration (underline) */
 }
 
 .table-column-head{
-    font-weight: bold;
+    /* Head of the column */
+    font-weight: bold; /* Font is bold */
 }
 
+.before{
+    /* Before service */
+    color: forestgreen; /* Colour of text in table */
+}
 
+.after{
+    /* After service */
+    color: forestgreen; /* Colour of text in table */
+}
+
+.maxwidth-title{
+    /* Titles maxwidth */
+    width: 150px;
+}
+
+.noRightBorder {
+    /* No right border */
+    border-right: None;
+}
+
+/* When width is more than 996px */
 @media screen and (min-width: 996px){
 
     .table-no-underline {
-        border-bottom: None;
+        /* No underline in table */
     }
 
     .orientations{
+        /* Width of items */
         width: 107px;
     }
-
-    .bigNoShow {
-        display: none;
-    }
-
-
 
     table.alignment td {
-        border-right: 2px solid darkgrey;
-
+        /* Table alignment for each cell */
+        border-right: 2px solid darkgrey; /* Right border colour and  */
     }
 
-    .maxwidth-empty-second{
-        width: 107px;
-    }
-
-    .target{
+    .tgt{
+        /* Width of target items */
         width: 250px;
     }
 
     .noRightBorder {
+        /* No right border */
         border-right: None;
     }
-
 }
 
-.maxwidth-title{
-    width: 150px;
-}
-
-
-.noRightBorder {
-    border-right: None;
-}
-
-/* input form for
-
- */
-
-.formheader{
-    text-align: left;
-    padding-top: 80px;
-
-
-}
-
-.collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    border-radius: 20px;
-}
-
-.active, .collapsible:hover {
-    background-color: #ccc;
-}
-
-/* Style the collapsible content.*/
-.content {
-    color: red;
-    padding: 0 18px;
-    background-color: #f1f1f1;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-    border-radius: 30px;
-
-}
-.collapsible:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 30px;
-    color: white;
-    float: right;
-    margin-left: 5px;
-    border-radius: 20px;
-}
-
-.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-
-}
-
-.footer{
-    width: 100%;
-    background-color: grey;
-    color: white;
-    text-align: center;
-
-}
-
-/* CSS response to small screen */
-
+/* When width is less than 995px */
 @media screen and (max-width: 995px) {
+    #title{
+        font-size: 300%;
+    }
+
+    .nav-item{
+        /* Navigation of items */
+        background-color: gray; /* Colour */
+    }
 
     .bottomTD{
+        /* No border */
         border-bottom: none;
     }
 
     .underPadding {
+        /* Padding size */
         padding-bottom: 30px;
     }
 
     table thead {
-        display: None /* no header */
+        /* Table header styling */
+        display: none /* No header */
     }
 
-    table tr { /*styling for each row*/
-        display: block; /*sets up for 1 element per line*/
-        padding-top: 0px;
-        padding-bottom: 0px;
 
-        /*margin-bottom: 15px;*/
+    table tr {
+        /* Styling for each row */
+        display: block; /*1 element per line*/
+        padding-top: 0px; /* No padding */
+        padding-bottom: 0px; /* No padding */
     }
 
-    table td { /*styling for each individual cell*/
-        border-right: none;
-        border-top: 1px solid darkgrey;
-        display: block;
-        position: relative;
-        padding-bottom: 10px;
+    table td {
+        /* Styling for each cell */
+        border-style: none;: 1px solid black; /* Where border is located */
+        display: block; /* Gets displayed in block form */
+        position: relative; /* Relative to the normal/original position */
+        padding-bottom: 10px; /* Padding at bottom */
     }
 
     table td:first-child {
-        border-right: none;
-        border-top: None;
+        /* First child */
+        border-right: none; /* No border */
+        border-top: None; /* No border */
     }
 
     table td:before {
-        border-right: none;
-        display: block;
-        content: attr(data-label);
-        font-weight: bold;
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        padding-right: 5px;
-        padding-bottom: 10px;
+        /* Before */
+        border-right: none; /* No border */
+        display: block; /* Displayed as block */
+        content: attr(data-label); /* Conetent is the attributed data label */
+        font-weight: bold; /* Bold font */
+        position: absolute; /* Nearest position to its ancenstor */
+        padding-top: 5px; /* Padding amount */
+        padding-left: 5px; /* Padding amount */
+        padding-right: 5px; /* Padding amount */
+        padding-bottom: 10px; /* Padding amount */
 
     }
 
     table td:after{
-        padding-bottom: 10px;
+        /* After */
+        padding-bottom: 10px; /* Padding amount */
     }
 
     .formheader{
-        padding-top: 56px;
-
+        padding-top: 56px; /* Padding on the top */
     }
 
     .noHeight{
-        padding-top: 0px;
-        padding: 0px;
-        border-bottom: None;
+        padding-top: 0px; /* No padding */
+        padding: 0px; /* No padding */
+        border-bottom: None; /* No border */
     }
 
     .background{
-        background-color: lightgrey;
+        background-color: lightgrey; /* Background colour */
     }
 
     .noShow {
-        display: None;
+        display: None; /* Displays nothing */
     }
 }
 
 @media screen and (max-width: 775px){
     table td:before {
-        position: relative;
+        position: relative; /* Position is relative to previous position */
     }
-
-
 }
+

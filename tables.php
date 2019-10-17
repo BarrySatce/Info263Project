@@ -6,7 +6,7 @@ require_once('./request/search_requests.php');
 ?>
 
 <!-- CSS style sheet -->
-<link rel="stylesheet" href="css/redoneStyles.css">
+<link rel="stylesheet" href="css/styles.css">
 
 <!-- Navigation tabs -->
 <ul class="nav nav-tabs" id="invoiceInfoTabs" role="tablist">
